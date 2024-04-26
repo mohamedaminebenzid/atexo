@@ -6,7 +6,8 @@ des critères de numérotation.
 Il doit être appelé en premier lieu avant IDENTIFIER-GENERATOR-SERVICE.
 
 La documentation du rest api est consultable via OpenAPI sur :
-http://localhost:8080/swagger-ui/index.html
+http://localhost:8080/swagger-ui/index.html.
+
 Pour configurer les critères de numérotation suivants :
 
 - Les 3 premières lettres du prénom avec un suffixe - et ordre 1
@@ -115,7 +116,7 @@ Il est appelé par IDENTIFIER-GENERATOR-SERVICE pour récupérer la nouvelle val
 compteur incrémentée pour chaque nouvel inscrit en entrée
 
 La documentation du rest api est consultable via OpenAPI sur :
-http://localhost:8081/swagger-ui/index.html
+http://localhost:8081/swagger-ui/index.html.
 Pour incrementer le compteur et renvoyer sa nouvelle valeur, il suffit d'appeler:
 ```
 curl -X 'POST' \
