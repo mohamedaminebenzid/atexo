@@ -18,7 +18,7 @@ Pour configurer les critères de numérotation suivants :
 
 Il suffit d'appeler :
 
-
+```
 curl -X 'PUT' \
 'http://localhost:8080/v1/configurations' \
 -H 'accept: application/json' \
@@ -60,7 +60,7 @@ curl -X 'PUT' \
 ]
 }
 '
-
+```
 Pour charger la configuration déja enregistrée, il suffit d'appeler:
 curl -X 'GET' \
 'http://localhost:8080/v1/configurations' \
