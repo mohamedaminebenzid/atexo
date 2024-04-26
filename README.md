@@ -1,4 +1,4 @@
-### CONFIGURATION-SERVICE
+#### CONFIGURATION-SERVICE
 
 Ce micro service est en charge d'enregistrer et charger la configuration
 des critères de numérotation.
