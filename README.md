@@ -168,6 +168,7 @@ status code = 200
 
 
 ### Evolutions possibles:
+- Au niveau de IDENTIFIER-GENERATOR-SERVICE, on utiliser un cache avec un temps d'expiration pour stocker la configuration 
 - Ajouter un API Gateway(pas nécessaire vu la simplicité de l'architecture actuelle)
 - Ajouter une couche sécurité
 - Ajouter plus de résilience aux APIs (circuit breaker, retry,..)
