@@ -62,6 +62,7 @@ curl -X 'PUT' \
 '
 ```
 Pour charger la configuration déja enregistrée, il suffit d'appeler:
+```
 curl -X 'GET' \
 'http://localhost:8080/v1/configurations' \
 -H 'accept: application/json'
@@ -106,5 +107,5 @@ status = 200
 }
 ]
 }
-
+```
 
