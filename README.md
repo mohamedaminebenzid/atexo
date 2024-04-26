@@ -159,7 +159,7 @@ status code = 200
 }
 ```
 
-####Evolutions possibles:
+### Evolutions possibles:
 -Ajouter un API Gateway(pas nécessaire vu la simplicité de l'architecture actuelle)
 -Ajouter une couche sécurité
 -Ajouter plus de résilience aux api (circuit breaker, retry,..)
