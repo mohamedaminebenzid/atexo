@@ -1,13 +1,12 @@
 package com.atexo.identifiergenerator.service;
 
 import com.atexo.identifiergenerator.model.IdentifierGenerationConfiguration;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 import java.net.URI;
 
-@Configuration
+@Service
 public class ConfigurationLoaderService {
     private final RestClient.Builder restClientBuilder;
 
@@ -15,8 +14,7 @@ public class ConfigurationLoaderService {
         this.restClientBuilder = restClientBuilder;
     }
 
-    @Bean
-    public IdentifierGenerationConfiguration identifierGenerationConfiguration() {
+    public IdentifierGenerationConfiguration loadConfiguration() {
         return restClientBuilder.build().get().uri(URI.create("http://CONFIGURATION-SERVICE/v1/configurations")).retrieve().body(IdentifierGenerationConfiguration.class);
 
     }

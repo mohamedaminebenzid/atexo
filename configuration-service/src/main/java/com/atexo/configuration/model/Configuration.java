@@ -6,8 +6,10 @@ import jakarta.validation.constraints.PositiveOrZero;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
+import java.util.TreeSet;
 
 @Getter
 @Schema
@@ -16,7 +18,8 @@ import java.util.List;
 public class Configuration {
     @PositiveOrZero
     private int counterInitialValue;
-    //Sorted set based on Comparable implementation
+
     @Schema
-    private List<@Valid CriterionConfiguration> orderedCriteria;
+    //Sorted set based on Comparable implementation
+    private TreeSet<@Valid CriterionConfiguration> criteria;
 }

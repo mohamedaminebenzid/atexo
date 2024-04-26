@@ -13,6 +13,6 @@ import java.util.List;
 @NoArgsConstructor
 public class IdentifierGenerationConfiguration {
     private int counterInitialValue;
-    //Lists preserve insertion order
-    private List<CriterionConfiguration> orderedCriteria;
+    //Lists preserves insertion order
+    private List<CriterionConfiguration> criteria;
 }
