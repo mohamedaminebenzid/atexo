@@ -1,6 +1,7 @@
-#### CONFIGURATION-SERVICE
+L'application est basé sur l'interaction de 3 micro-services + un service-registry:
+#### 1-CONFIGURATION-SERVICE
 
-Ce micro service est en charge d'enregistrer et charger la configuration
+Ce micro service est en charge d'enregistrer et de charger la configuration
 des critères de numérotation.
 Il doit être appelé en premier lieu avant IDENTIFIER-GENERATOR-SERVICE.
 
@@ -108,4 +109,25 @@ status = 200
 ]
 }
 ```
+#### 2-COUNTER-SERVICE
+Ce micro service COUNTER-SERVICE est en charge de stocker et incrementer le compteur.
+Il est appelé par IDENTIFIER-GENERATOR-SERVICE pour récupérer la nouvelle valeur du
+compteur incrémentée pour chaque nouvel inscrit en entrée
 
+La documentation du rest api est consultable via OpenAPI sur :
+http://localhost:8081/swagger-ui/index.html
+Pour incrementer le compteur et renvoyer sa nouvelle valeur, il suffit d'appeler:
+```
+curl -X 'POST' \
+'http://localhost:8081/v1/counters' \
+-H 'accept: application/json' \
+-d ''
+```
+la réponse sera:
+
+status = 200
+```
+{
+"value": 11
+}
+```
