@@ -170,7 +170,8 @@ status code = 200
 ### Evolutions possibles:
 - Au niveau de IDENTIFIER-GENERATOR-SERVICE, on peut utiliser un cache expirable pour stocker la configuration des critères de numérotation(chargée depuis CONFIGURATION-SERVICE)
   afin d'améliorer la performance.
-- Ajouter un API Gateway(pas nécessaire vu la simplicité de l'architecture actuelle)
-- Ajouter une couche sécurité
-- Ajouter plus de résilience aux APIs (circuit breaker, retry,..)
+- Rajouter plus de TU
+- Rajouter un API Gateway(pas nécessaire vu la simplicité de l'architecture actuelle)
+- Rajouter une couche sécurité
+- Rajouter plus de résilience aux APIs (circuit breaker, retry,..)
 - Error handling (ajout de business exception, retourner les bons status code)
