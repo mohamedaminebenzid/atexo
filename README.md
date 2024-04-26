@@ -160,6 +160,8 @@ status code = 200
 }
 ```
 ### Choix Techniques:
+- Pour des fins de simplicité, les données de l'application sont sauvegardées sous format de fichiers json.
+  Dans un contexte HA(multi instances/JVM), il faut gérer les accès concurrents aux ressources(utiliser une BD, un systeme de fichier partagé,..)
 - L'API de saisie de configuration est extensible: on peut rajouter de nouveaux critères de numerotation sans casser les autres API. 
 - Le versionning des APIs permet d'assurer une compatibilité ascendante.
 - Choix de PUT au lieu de POST au niveau du service de configuration vu l'idempotence du PUT.
