@@ -69,9 +69,9 @@ curl -X 'GET' \
 -H 'accept: application/json'
 ```
 la réponse sera:
-
-status = 200
 ```
+status code = 200
+
 {
 "counterInitialValue": 10,
 "orderedCriteria": [
@@ -124,10 +124,38 @@ curl -X 'POST' \
 -d ''
 ```
 la réponse sera:
-
-status = 200
 ```
+status code = 200
 {
 "value": 11
 }
 ```
+#### 3-IDENTIFIER-GENERATOR-SERVICE
+Ce micro-service est en charge de générer l'identificateur 
+en fonction des données de l'inscrit et selon la configuration renvoyée
+par le micro-service CONFIGURATION-SERVICE.
+Il doit être appelé une fois la configuration est enregistrée par
+CONFIGURATION-SERVICE.
+La documentation du rest api est consultable via OpenAPI sur :
+http://localhost:8082/swagger-ui/index.html
+
+Afin de générer l'id de l'inscrit il suffit d'appeler :
+```
+curl -X 'POST' \
+'http://localhost:8082/v1/identifiers' \
+-H 'accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{
+"name": "PASSAU",
+"firstName": "Marc",
+"birthDate": "1974-04-24"
+}'
+```
+Le résultat renvoyé sera:
+```
+status code = 200
+{
+"value": "MAR-PASS_1974C00017"
+}
+```
+
