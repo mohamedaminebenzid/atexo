@@ -1,4 +1,4 @@
-L'application est basé sur l'interaction de 3 micro-services + un service-registry:
+L'application est basée sur l'interaction de 3 micro-services + un service-registry:
 #### 1-CONFIGURATION-SERVICE
 
 Ce micro service est en charge d'enregistrer et de charger la configuration
@@ -139,7 +139,7 @@ CONFIGURATION-SERVICE.
 La documentation du rest api est consultable via OpenAPI sur :
 http://localhost:8082/swagger-ui/index.html
 
-Afin de générer l'id de l'inscrit il suffit d'appeler :
+Afin de générer l'identifiant de l'inscrit, il suffit d'appeler :
 ```
 curl -X 'POST' \
 'http://localhost:8082/v1/identifiers' \
