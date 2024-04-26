@@ -158,10 +158,15 @@ status code = 200
 "value": "MAR-PASS_1974C00011"
 }
 ```
+### Choix Techniques:
+- L'API de saisie de configuration est extensible: on peut rajouter de nouveaux critères de numerotation sans casser les autres API. 
+- Le versionning des API permet d'assurer une compatibilité ascendante.
+- Choix de PUT au lieu de POST au niveau du service de configuration vu l'idempotence du PUT.
+
 
 ### Evolutions possibles:
--Ajouter un API Gateway(pas nécessaire vu la simplicité de l'architecture actuelle)
--Ajouter une couche sécurité
--Ajouter plus de résilience aux api (circuit breaker, retry,..)
--Error handling (ajout de business exception, retourner les bons status code)
--
+- Utiliser un mecanisme de lock approprié pour synchroniser l'incrémentation du compteur en mode HA(multi instances)
+- Ajouter un API Gateway(pas nécessaire vu la simplicité de l'architecture actuelle)
+- Ajouter une couche sécurité
+- Ajouter plus de résilience aux api (circuit breaker, retry,..)
+- Error handling (ajout de business exception, retourner les bons status code)
