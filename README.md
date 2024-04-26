@@ -27,7 +27,7 @@ curl -X 'PUT' \
 -H 'Content-Type: application/json' \
 -d '{
 "counterInitialValue": 10,
-"orderedCriteria": [
+"criteria": [
 {
 "criterionName": "FIRST_NAME",
 "prefix": "",
@@ -75,7 +75,7 @@ status code = 200
 
 {
 "counterInitialValue": 10,
-"orderedCriteria": [
+"criteria": [
 {
 "criterionName": "FIRST_NAME",
 "prefix": "",
